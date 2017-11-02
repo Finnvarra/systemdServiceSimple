@@ -1,0 +1,15 @@
+[Unit]
+Description=Tractor-blade
+After=network-online.target
+
+[Service]
+Type= simple
+ExecStart=/opt/pixar/Tractor-2.2/bin/tractor-blade
+ExecStop=/opt/pixar/Tractor-2.2/bin/tractor-blade
+ExecReload= /opt/pixar/Tractor-2.2/bin/tractor-blade
+StandardOutput=journal
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
